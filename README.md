@@ -19,38 +19,32 @@ mini_fastAPI/
 │   │   │
 │   │   ├── services/
 │   │   │   └── product_service.py # Lógica de negocio
-│   │   │                           CRUD de productos - Interacción con la DB - No contiene código FastAPI
+│   │   │                          CRUD de productos - Interacción con la DB - Sin código FastAPI
 │   │   │
 │   │   └── api/
 │   │       ├── router.py          # Router principal de la API
-│   │       │                      Agrupa todos los endpoints - Define prefijos (/api)
+│   │       │                      Agrupa endpoints - Prefijo (/api)
 │   │       │
 │   │       └── endpoints/
 │   │           └── products.py    # Endpoints REST de productos
-│   │                              GET /products - POST /products - Maneja requests y responses
+│   │                              GET /products - POST /products
 │   │
 │   └── requirements.txt           # Dependencias del backend
 │
 ├── frontend/                      # Frontend con Streamlit
 │   │
-│   ├── app.py                    # Página principal (Home)
-│   │                             Configuración inicial de Streamlit - Descripción de la aplicación
+│   ├── app.py                     # Página principal
+│   │                             Configuración inicial y descripción
 │   │
 │   ├── pages/
-│   │   ├── 1_Agregar.py          # Página para crear productos
-│   │   │                         Formulario - Llama al backend (POST)
-│   │   │
-│   │   └── 2_Listado.py          # Página para listar productos
-│   │                             Llama al backend (GET) - Muestra tabla y métricas
+│   │   ├── 1_Agregar.py           # Crear productos (POST)
+│   │   └── 2_Listado.py           # Listar productos (GET)
 │   │
 │   ├── services/
-│   │   └── api_client.py         # Cliente HTTP del frontend
-│   │                             Usa requests - Encapsula llamadas a la API - No contiene lógica de UI
+│   │   └── api_client.py          # Cliente HTTP (requests)
 │   │
-│   ├── config.py                 # Configuración del frontend
-│   │                             URL del backend - Constantes globales
+│   ├── config.py                  # Configuración global
 │   │
-│   └── requirements.txt          # Dependencias del frontend
+│   └── requirements.txt           # Dependencias del frontend
 │
-└── README.md                     # Documentación del proyecto
-                                 # Explica arquitectura, flujo y uso
+└── README.md                      # Documentación del proyecto
